@@ -1,0 +1,207 @@
+:root {
+  --bg: #ffffff;
+  --surface: #f5f6f8;
+  --text: #1c1c1e;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --accent: #0f8afd;
+  --accent-weak: rgba(15, 138, 253, 0.1);
+  --radius: 14px;
+  --maxw: 760px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d0f12;
+    --surface: #16191e;
+    --text: #f2f3f5;
+    --muted: #9aa2ad;
+    --border: #262b32;
+    --accent: #4aa8ff;
+    --accent-weak: rgba(74, 168, 255, 0.14);
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 32px 20px 96px;
+}
+
+header.site {
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+header.site .wrap {
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.brand .mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #34c1fc, #0273fc);
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 18px;
+  flex: none;
+}
+
+nav.site a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 18px;
+}
+
+nav.site a:hover { color: var(--accent); }
+
+h1 {
+  font-size: 30px;
+  line-height: 1.2;
+  margin: 8px 0 4px;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 21px;
+  margin: 40px 0 10px;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 17px;
+  margin: 24px 0 6px;
+}
+
+.updated {
+  color: var(--muted);
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+p, li { color: var(--text); }
+
+a { color: var(--accent); }
+
+.lead {
+  font-size: 18px;
+  color: var(--text);
+}
+
+ul, ol { padding-left: 22px; }
+li { margin: 6px 0; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin: 18px 0;
+}
+
+.card p:first-child { margin-top: 0; }
+.card p:last-child { margin-bottom: 0; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 15px;
+  display: block;
+  overflow-x: auto;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+th { color: var(--muted); font-weight: 600; white-space: nowrap; }
+
+code {
+  background: var(--accent-weak);
+  color: var(--accent);
+  padding: 1px 6px;
+  border-radius: 6px;
+  font-size: 0.9em;
+}
+
+.pill {
+  display: inline-block;
+  background: var(--accent-weak);
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+footer.site {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+footer.site .wrap {
+  padding: 24px 20px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  justify-content: space-between;
+}
+
+footer.site a { color: var(--muted); text-decoration: none; }
+footer.site a:hover { color: var(--accent); }
+
+.home-hero { text-align: center; padding-top: 24px; }
+.home-hero .mark-lg {
+  width: 76px; height: 76px; border-radius: 18px;
+  background: linear-gradient(135deg, #34c1fc, #0273fc);
+  display: inline-grid; place-items: center; color: #fff;
+  font-size: 40px; margin-bottom: 16px;
+}
+.home-links {
+  display: grid; gap: 12px; grid-template-columns: 1fr 1fr;
+  margin: 28px 0;
+}
+.home-links a {
+  display: block; text-decoration: none; text-align: left;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 18px 20px; color: var(--text);
+}
+.home-links a:hover { border-color: var(--accent); }
+.home-links .t { font-weight: 700; font-size: 16px; }
+.home-links .d { color: var(--muted); font-size: 14px; margin-top: 2px; }
+@media (max-width: 520px) { .home-links { grid-template-columns: 1fr; } }
