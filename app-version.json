@@ -1,6 +1,6 @@
 {
   "_readme": "Read by the iOS app once a day (AppUpdateService). Bump latestVersion on every App Store release, or the in-app 'Update available' row never appears. Everything else stays untouched unless a release turns out to be broken: set minimumSupportedVersion above it, or required:true, and every affected build starts asking to update. Unknown fields are ignored by the app, so this note is safe to keep.",
-  "latestVersion": "1.0.0",
+  "latestVersion": "1.0.1",
   "minimumSupportedVersion": "1.0.0",
   "required": false,
   "releaseNotes": {
