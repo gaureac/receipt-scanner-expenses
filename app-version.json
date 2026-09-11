@@ -1,10 +1,13 @@
 {
   "_readme": "Read by the iOS app once a day (AppUpdateService). Bump latestVersion on every App Store release, or the in-app 'Update available' row never appears. Everything else stays untouched unless a release turns out to be broken: set minimumSupportedVersion above it, or required:true, and every affected build starts asking to update. Unknown fields are ignored by the app, so this note is safe to keep.",
-  "latestVersion": "1.0.1",
+  "latestVersion": "1.0.2",
   "minimumSupportedVersion": "1.0.0",
   "required": false,
   "releaseNotes": {
-    "en": "",
-    "de": ""
+    "en": "• Now available in Italian, Spanish and French — the app, and the PDF, CSV and Excel reports with it\n• Better category guesses on Italian, Spanish and French receipts\n• Fixed a merchant match that could put the wrong category on a receipt\n• Report date ranges now use a short month name, so they fit in every language",
+    "de": "• Jetzt auch auf Italienisch, Spanisch und Französisch — die App und die PDF-, CSV- und Excel-Berichte dazu\n• Bessere Kategorievorschläge auf italienischen, spanischen und französischen Belegen\n• Ein Händler-Treffer korrigiert, der einem Beleg die falsche Kategorie geben konnte\n• Der Zeitraum im Bericht nutzt jetzt einen kurzen Monatsnamen und passt damit in jeder Sprache",
+    "it": "• Ora disponibile in italiano — l'app e i report PDF, CSV ed Excel\n• Categorie suggerite meglio sugli scontrini italiani\n• Corretta una corrispondenza del negozio che poteva assegnare la categoria sbagliata\n• Il periodo nel report usa ora un mese abbreviato, così sta in ogni lingua",
+    "fr": "• Désormais disponible en français — l'app et les rapports PDF, CSV et Excel\n• Meilleures suggestions de catégorie sur les reçus français\n• Correction d'une correspondance de commerçant qui pouvait attribuer la mauvaise catégorie\n• La période du rapport utilise maintenant un mois abrégé et tient dans toutes les langues",
+    "es": "• Ya disponible en español — la app y los informes PDF, CSV y Excel\n• Mejores categorías sugeridas en los recibos españoles\n• Corregida una coincidencia de comercio que podía asignar la categoría equivocada\n• El periodo del informe usa ahora un mes abreviado, así que cabe en todos los idiomas"
   }
 }
