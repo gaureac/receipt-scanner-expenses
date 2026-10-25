@@ -21,19 +21,20 @@
 <main class="wrap">
   <span class="pill">Privacy first</span>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: August 10, 2026</p>
+  <p class="updated">Last updated: October 25, 2026</p>
 
   <p class="lead">Receipt Scanner: Expenses (the “App”) is built to be private by default.
-  Your receipts and expense data are stored on your device. We do not run servers that
-  collect your data, we do not use analytics or advertising SDKs, and we never sell your
-  information.</p>
+  Your receipts and expense data are stored on your device. The one server we run receives
+  anonymous statistics about how well text recognition worked, never a receipt; we do not use
+  analytics or advertising SDKs, and we never sell your information.</p>
 
   <div class="card">
     <p><strong>The short version.</strong> Receipt images and the details extracted from
     them stay on your iPhone. Text recognition (OCR) happens on the device. The App only
-    connects to the internet for a few specific, optional purposes described below —
-    currency exchange rates, managing your subscription, and (if you turn it on) backing up
-    to your own private iCloud. None of these send your receipt images or their contents to us.</p>
+    connects to the internet for a few specific purposes described below — currency exchange
+    rates, managing your subscription, recognition statistics (which you can switch off), and
+    (if you turn it on) backing up to your own private iCloud. None of these send your receipt
+    images or their contents to us.</p>
   </div>
 
   <h2>1. Who we are</h2>
@@ -62,11 +63,27 @@
   <h2>4. No tracking, no ads, no analytics SDK</h2>
   <p>The App contains no analytics SDK, no advertising SDK, and no third-party trackers. We do
   not build advertising profiles, and we do not track you across other apps or websites. Nothing
-  you scan, type or read in the App is measured or reported anywhere.</p>
-  <p>The one exception, stated plainly: our subscription provider shows us aggregate statistics
-  about subscriptions themselves — how many are active, started or cancelled, and the anonymous
-  identifier each purchase belongs to. That is what Apple’s privacy label calls “Analytics”, and
-  we declare it there. It concerns purchases only, never your receipts or how you use the App.</p>
+  you scan, type or read in the App is sent anywhere.</p>
+  <p>Two exceptions, stated plainly. That is what Apple’s privacy label calls “Analytics”, and we
+  declare both there.</p>
+  <ul>
+    <li><strong>Subscriptions.</strong> Our subscription provider shows us aggregate statistics
+        about subscriptions themselves — how many are active, started or cancelled, and the
+        anonymous identifier each purchase belongs to. This concerns purchases only.</li>
+    <li><strong>Recognition statistics.</strong> When you save a receipt you scanned or imported,
+        the App reports, for each field — merchant, date, total, tax, currency and category —
+        whether text recognition got it right or you had to correct it, and the receipt’s
+        currency code (for example MDL or EUR). When you close a scan without saving, it reports
+        only which fields recognition found. With either go where the App was installed from (the App Store,
+        TestFlight or a development build), the App and iOS versions, the App’s language and
+        your device’s language, your device’s region, the recognition languages, whether it was a scan or an
+        import, the number of pages, the recognizer’s own confidence score, and the scan’s place
+        in the month on this device (1 to 10, or “11+”), a counter many devices share. It
+        <strong>never</strong> contains the image, the recognized text, the merchant, any amount
+        or date, or any identifier, so it cannot be linked to you. We use it only to find where
+        recognition fails and fix it. It is on by default; switch it off in
+        <em>Settings → Recognition statistics</em>, and nothing more is sent.</li>
+  </ul>
 
   <h2>5. When the App connects to the internet</h2>
   <p>The App is offline-first. It functions without a network connection. It reaches the
@@ -85,6 +102,15 @@
           identifier. No name or email. The provider shows us aggregate subscription
           statistics built from this, and nothing else.</td>
       <td>RevenueCat &amp; Apple</td>
+    </tr>
+    <tr>
+      <td>Recognition statistics (after you save or close a scanned or imported receipt; can be
+          switched off in Settings)</td>
+      <td>For each field, whether recognition got it right; the receipt’s currency code; the install source
+          (App Store, TestFlight or development build), the App and iOS versions, the App’s and the device’s language, region, recognition languages, page count and a monthly scan
+          counter. <strong>No receipt image, text, amount, date or identifier.</strong> Each entry
+          is stored with the day it arrived, not the time; your IP address is not stored.</td>
+      <td>Our own endpoint on Cloudflare, stored in the EU</td>
     </tr>
     <tr>
       <td>Optional iCloud backup (off by default)</td>
@@ -110,6 +136,9 @@
         statistics back to us. See RevenueCat’s Privacy Policy.</li>
     <li><strong>Frankfurter</strong> — public currency exchange-rate
         data. No account or personal data is involved.</li>
+    <li><strong>Cloudflare</strong> — runs the endpoint that receives recognition statistics and
+        stores them in the European Union. We do not store IP addresses or request logs.
+        See Cloudflare’s Privacy Policy.</li>
   </ul>
   <p>We do not sell, rent, or share your personal information with third parties for their own
   marketing.</p>
@@ -136,6 +165,9 @@
         managed by you through iCloud/Apple; deleting it there removes it.</li>
     <li><strong>Purchase records</strong> held by Apple and RevenueCat are retained under their
         policies for accounting, fraud-prevention, and restore purposes.</li>
+    <li><strong>Recognition statistics</strong> are kept for 12 months and then deleted
+        automatically. They hold no identifier, so we cannot find or delete the entries from one
+        device; switching the setting off stops new ones.</li>
   </ul>
 
   <h2>10. Children</h2>
