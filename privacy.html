@@ -21,20 +21,21 @@
 <main class="wrap">
   <span class="pill">Privacy first</span>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: October 25, 2026</p>
+  <p class="updated">Last updated: November 12, 2026</p>
 
   <p class="lead">Receipt Scanner: Expenses (the “App”) is built to be private by default.
   Your receipts and expense data are stored on your device. The one server we run receives
-  anonymous statistics about how well text recognition worked, never a receipt; we do not use
-  analytics or advertising SDKs, and we never sell your information.</p>
+  anonymous statistics about how well text recognition worked, never a receipt. If the App
+  crashes, a technical crash report goes to our crash-reporting provider, again without any
+  receipt. We do not use analytics or advertising SDKs, and we never sell your information.</p>
 
   <div class="card">
     <p><strong>The short version.</strong> Receipt images and the details extracted from
     them stay on your iPhone. Text recognition (OCR) happens on the device. The App only
     connects to the internet for a few specific purposes described below — currency exchange
-    rates, managing your subscription, recognition statistics (which you can switch off), and
-    (if you turn it on) backing up to your own private iCloud. None of these send your receipt
-    images or their contents to us.</p>
+    rates, managing your subscription, recognition statistics and crash reports (both of which
+    you can switch off), and (if you turn it on) backing up to your own private iCloud. None of
+    these send your receipt images or their contents to us.</p>
   </div>
 
   <h2>1. Who we are</h2>
@@ -84,6 +85,22 @@
         recognition fails and fix it. It is on by default; switch it off in
         <em>Settings → Recognition statistics</em>, and nothing more is sent.</li>
   </ul>
+  <p><strong>Crash reports.</strong> If the App crashes, freezes, or is stopped by iOS, it sends
+  a crash report so we can find and fix the fault: right away for a freeze, and the next time
+  the App opens for a crash or a stop. Nothing is sent while the App works normally. A report
+  carries the technical details of the fault — the stack trace (which of the App’s functions
+  were running), the error type and message — and the context needed to reproduce it: the device
+  model, the iOS version and build, the kernel version, the language and region setting, the
+  time zone, the device’s total and free memory, its screen size and thermal state, whether it
+  was on Wi-Fi or cellular, the App’s version and build, when the App was started, and the names
+  of the App’s screens that were open (their programming names, not what they showed). It
+  <strong>never</strong> contains a receipt image, recognized text, a merchant, an amount or a
+  date, and it carries no user ID, install ID, IP address or location: the App removes the
+  identifiers the crash-reporting library adds by default, replaces the per-install folder name
+  in file paths with zeros, and tells the provider not to derive a location from the connection.
+  Reports go to Sentry and are stored in the European Union. Apple’s privacy label calls this
+  “Diagnostics”, and we declare it there. It is on by default; switch it off in <em>Settings →
+  Crash reports</em>, and the App stops recording crashes.</p>
 
   <h2>5. When the App connects to the internet</h2>
   <p>The App is offline-first. It functions without a network connection. It reaches the
@@ -113,6 +130,16 @@
       <td>Our own endpoint on Cloudflare, stored in the EU</td>
     </tr>
     <tr>
+      <td>Crash reports (after a crash, a freeze or iOS stopping the App; can be switched off
+          in Settings)</td>
+      <td>The stack trace, error type and message; the device model, iOS version and build,
+          kernel version, language and region, time zone, memory, screen size, thermal state and
+          connection type; the App’s version and build, its start time and the names of the
+          screens that were open. <strong>No receipt image, text, amount, date, user ID, install
+          ID or location.</strong> Your IP address is not stored.</td>
+      <td>Sentry, stored in the EU</td>
+    </tr>
+    <tr>
       <td>Optional iCloud backup (off by default)</td>
       <td>A backup archive of your receipts, saved to <strong>your own</strong> private iCloud
           Drive container. We have no access to it.</td>
@@ -139,6 +166,9 @@
     <li><strong>Cloudflare</strong> — runs the endpoint that receives recognition statistics and
         stores them in the European Union. We do not store IP addresses or request logs.
         See Cloudflare’s Privacy Policy.</li>
+    <li><strong>Sentry</strong> (Functional Software, Inc.) — receives crash reports and stores
+        them in the European Union. It is set not to store IP addresses, and the App tells it
+        not to derive a location from the connection. See Sentry’s Privacy Policy.</li>
   </ul>
   <p>We do not sell, rent, or share your personal information with third parties for their own
   marketing.</p>
@@ -167,6 +197,9 @@
         policies for accounting, fraud-prevention, and restore purposes.</li>
     <li><strong>Recognition statistics</strong> are kept for 12 months and then deleted
         automatically. They hold no identifier, so we cannot find or delete the entries from one
+        device; switching the setting off stops new ones.</li>
+    <li><strong>Crash reports</strong> are kept by Sentry for up to 90 days and then deleted
+        automatically. They hold no identifier, so we cannot find or delete the reports from one
         device; switching the setting off stops new ones.</li>
   </ul>
 
